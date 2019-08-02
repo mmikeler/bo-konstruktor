@@ -1,0 +1,308 @@
+/*================================ fonts*/
+@font-face {
+      font-family: "header-regular";
+      src: url("./fonts/Exo2Regular/Exo2Regular.eot");
+      src: url("./fonts/Exo2Regular/Exo2Regular.eot?#iefix")format("embedded-opentype"),
+      url("./fonts/Exo2Regular/Exo2Regular.woff") format("woff"),
+      url("./fonts/Exo2Regular/Exo2Regular.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+  }
+@font-face {
+      font-family: "header-bold";
+      src: url("./fonts/Exo2Bold/Exo2Bold.eot");
+      src: url("./fonts/Exo2Bold/Exo2Bold.eot?#iefix")format("embedded-opentype"),
+      url("./fonts/Exo2Bold/Exo2Bold.woff") format("woff"),
+      url("./fonts/Exo2Bold/Exo2Bold.ttf") format("truetype");
+      font-style: bold;
+      font-weight: bold;
+  }
+@font-face {
+      font-family: "header-medium";
+      src: url("./fonts/Exo2Medium/Exo2Medium.eot");
+      src: url("./fonts/Exo2Medium/Exo2Medium.eot?#iefix")format("embedded-opentype"),
+      url("./fonts/Exo2Medium/Exo2Medium.woff") format("woff"),
+      url("./fonts/Exo2Medium/Exo2Medium.ttf") format("truetype");
+      font-style: medium;
+      font-weight: medium;
+  }
+
+/*============================== template*/
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-column-left{
+  flex-direction: column;
+  align-items: flex-start;
+}
+.justify-start{
+  justify-content: flex-start;
+}
+.align-i-normal{
+  align-items: normal;
+}
+ul,ol{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.under-title{
+  font-size: 10px;
+  color: #aaa;
+  display: block;
+}
+.pointer{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
+.btn{
+  display: block;
+  background: #ddd;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.btn[has_new_options="yes"]{
+  background: green;
+  color: #fff;
+}
+/*=================================== tipography*/
+.fs14{
+  font-size: 14px;
+}
+/*================================= form*/
+input,button{
+  margin: auto;
+  padding: 5px;
+  display: block;
+}
+[state=fail] input{
+  border: 1px solid red;
+}
+
+/*=============================== width*/
+.w100p{
+  width: 100%;
+}
+.w300{
+  width: 300px;
+  max-width: 100%;
+}
+.half{
+  width: calc(48% - 30px);
+  padding: 15px;
+}
+
+/*============================= margin*/
+.ma{
+  margin: auto;
+}
+.mx-a{
+  margin-left: auto;
+  margin-right: auto;
+}
+.m20 {
+  margin: 20px;
+}
+.mx10{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.mb30{
+  margin-bottom: 30px;
+}
+
+/*=============================== padding*/
+.py5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*============================ colors*/
+.white{
+  color: #fff;
+}
+
+/*============================ icons*/
+.fa{
+  cursor: pointer;
+  padding: 5px;
+  transition: all .5s;
+  opacity: .8;
+}
+.fa-bars{
+  font-size: 30px;
+}
+.fa-close{
+  font-size: 10px;
+}
+.fa-edit, .fa-plus{
+  color: #999;
+}
+.spinner{
+  font-size: 40px;
+  margin: auto;
+  color: #999;
+  animation: spin 1s infinite;
+}
+.hover-red:hover{
+  color: red;
+  opacity: 1;
+}
+.hover-green:hover{
+  color:  #83d183;
+  opacity: 1;
+}
+
+/*============================ other*/
+.body{
+  min-height: 100vh;
+  font-family: header-regular;
+}
+.bord{
+  width: calc(100% - 330px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+.body>.content{
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+header{
+  height: 40px;
+  background: #333;
+  color: #fff;
+  padding: 0 15px;
+}
+.header-logo{
+  width: 150px;
+}
+.widget{
+  border: 1px solid #333;
+  padding-top: 0;
+}
+.widget__title{
+  font-family: header-bold;
+  font-weight: 700;
+  background: #333;
+  color: #fff;
+  padding: 7px 15px;
+  min-height: 30px;
+}
+.widget__content{
+  padding: 15px;
+}
+
+/*================================ form options*/
+.tabs__header{
+  transition: all .3s;
+  justify-content: flex-start;
+}
+.tabs__header-item{
+  border: 1px solid #555;
+  padding: 15px;
+  margin: 0 7px -1px 7px;
+  background: #fff;
+}
+.tabs__header-item.disabled{
+  opacity: .3;
+  background: #ccc;
+  cursor: default;
+}
+.tabs__header-item[active-tab="active"]{
+  border-bottom: 1px solid transparent;
+}
+.tab-item{
+  padding: 30px;
+  border: 1px solid #555;
+  display: none;
+}
+.tab-item[active-tab="active"]{
+  display: block;
+}
+form{
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+fieldset{
+  padding: 10px;
+  border: 1px solid transparent;
+  border-top: 1px solid #6fc0ec;
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+legend{
+  padding: 5px;
+  color: #6fc0ec;
+}
+fieldset input, fieldset button{
+  margin: 15px 0;
+}
+
+.field{
+  margin-bottom: 20px;
+}
+.field__title{
+  font-size: 14px;
+  color: inherit;
+}
+.field__subtitle{
+  font-size: 12px;
+  color: #aaa;
+}
+
+[type="checkbox"]{
+  display: none;
+}
+.checkbox-styler::before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  margin: 15px;
+}
+.checkbox-styler.checked::before{
+  content: '\2714';
+  font-size: 33px;
+  line-height: .5;
+  color: green;
+}
+
+.style__item{
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: calc(23% - 10px);
+  margin: 10px auto;
+}
+label[is_change="1"]{
+  box-shadow: 0 0 3px 5px #6fc0ec;
+}
+/*============================== sidebar*/
+.sidebar{
+  padding: 15px;
+  width: 270px;
+}
+
+/*================================ animation*/
+@keyframes spin{
+  0%{ transform: rotate(0deg); }
+  100%{ transform: rotate(360deg); }
+}
